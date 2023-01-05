@@ -1,24 +1,27 @@
 def should_modify(i):
     # Modify this function to specify the set of atoms you want to modify
-    return i in [286,285,284,283]   
+    return i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286]   # The numbers id the atoms starting from 1 (2,3,...)
 
 # The value to be added to the Z value of atoms being shifted
 change_z=10.0
 
+# Warnings
+print("\n\nWARNING:\nThis script currently does not check if the atoms move beyond boundaries!")
+
 # Read in the POSCAR file
 with open('POSCAR_1', 'r') as f:
     lines = f.readlines()
-    print(lines)
+    #print(lines)
     print(" ")
 # Parse the header information
 header = lines[:8]
-print("This POSCAR has" %i "lines..." %(len(lines)))
+#print("This POSCAR has %s lines...", %(len(lines)))
 #print(header)
 #print(" ")
 num_atoms = [int(x) for x in header[6].split()]
 #print(num_atoms)
 total_atoms = sum(num_atoms)
-print("Total Atoms:" total_atoms)
+ 
 print(" ")
 
 # Parse the selective dynamics information
