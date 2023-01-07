@@ -96,3 +96,4 @@ with open('POSCAR_2', 'w') as f:
     #for line in selective_dynamics + coordinates:
     for line in selective_dynamics:
         f.write(' '.join(line) + '\n')
+
